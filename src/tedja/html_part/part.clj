@@ -11,18 +11,17 @@
   (h/html [:span.funde "lebron james"]))
 
 (defn curhatan []
-  (h/html [:div.curhatan "curhatan akuuuu {{curhat}}"]))
+  (h/html [:div.curhatan "mengapa oh mengapa begini"]))
 
 (defn curhat []
-  (h/html [:div.curhat "jadi aku tuh sebel sama si x bla bla bla"]))
-
+  (h/html [:div.curhat "labidi labidi ooh"]))
 
 (defn login-form []
   (f/form-to [:post "/login"]
-             (f/text-field {:placeholder "username su" :required true} :username)[:br]
-             (f/password-field {:placeholder "passwordcok" :required true} :password)[:br]
-             (f/radio-button :kelamin false "bencis")[:br]
-             (f/radio-button :kelamin false "bancong")"bancong"[:br]
+             (f/text-field {:placeholder "username" :required true} :username)[:br]
+             (f/password-field {:placeholder "password" :required true} :password)[:br]
+             (f/radio-button :preferensi false "tata")[:br]
+             (f/radio-button :preferensi false "tedja")[:br]
              (f/submit-button :login)
              [:p
               (f/label "radio"  "radio")

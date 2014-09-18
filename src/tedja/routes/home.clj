@@ -1,8 +1,9 @@
 (ns tedja.routes.home
   (:require [compojure.core :refer :all]
             [tedja.layout :as layout]
-            [tedja.util :as util]
+            [tedja.util :refer [render]]
             [tedja.html-part.part :as part]
+            [tedja.html-part.base :as base]
             [tedja.cooking.part :as cook]))
 
 (defn home-page []
@@ -30,12 +31,14 @@
                  {:content (cook/login-post username password)
                   :curhat (part/curhat)}))
 
-(log)
+(defn enlive []
+  (render (base/main-template)))
 
 (defroutes home-routes
   (GET "/" [] (home-page))
   (GET "/about" [] (about-page))
   (GET "/photos" [] (photos-page))
   (GET "/curhat" [] (curhat-page))
+  (GET "/enlive" [] (enlive))
   (GET "/login" [] (login-page))
   (POST "/login" [username password] (login-post-page username password)))
