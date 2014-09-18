@@ -1,7 +1,8 @@
 (ns tedja.routes.home
   (:require [compojure.core :refer :all]
             [tedja.layout :as layout]
-            [tedja.util :refer [render]]
+            [tedja.util :as util]
+            [tedja.utils :refer [render]]
             [tedja.html-part.part :as part]
             [tedja.html-part.base :as base]
             [tedja.cooking.part :as cook]))

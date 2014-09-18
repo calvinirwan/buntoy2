@@ -11,7 +11,7 @@
 
 (def users
   [{:type "user" :username "calvin" :password "lebron"}
-    {:type "user" :username "calvin1" :password "lebron1"}
-    {:type "user" :username "calvin2" :password "lebron2"}
-    {:type "user" :username "calvin3" :password "lebron3"}])
+   {:type "user" :username "vina" :password "zeneng"}
+   {:type "user" :username "tedja" :password "tedja"}
+   {:type "user" :username "a" :password "a"}])
 (defn calvin []  "i love me")
